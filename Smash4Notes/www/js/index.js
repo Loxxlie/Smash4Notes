@@ -21,7 +21,6 @@ var currentID;
 var editing;
 var ios;
 var paused = false;
-var aboutOpen = false;
 
 $(document).ready(function() {
     console.log("DEVICE READY");
@@ -252,4 +251,14 @@ function clearClick() {
 
 function framedataClick() {
     window.open('http://kuroganehammer.com/Smash4', '_system');
+}
+
+function aboutClick() {
+    $('#about-drop-down').css("display", "inline");
+    $('#blanket').css("display", "inline");
+}
+
+function aboutCloseClick() {
+    $('#about-drop-down').css("display", "none");
+    $('#blanket').css("display", "none");
 }

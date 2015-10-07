@@ -14,9 +14,26 @@
     <body>
     <!-- Start of HTML markup -->
         <div class="app">
+            <div id="blanket"></div>
             <div id="status-bar-spacer"></div>
             <div id="search-bar" data-role="none">
-                <div class="iconDiv"><i class="fa fa-info-circle icon"></i></div><input type="search" id="search" autocomplete="off" placeholder="Search..." onSearch="searchNotes()" data-role="none"/><input class="button" type="button" id="clear" value="Clear" onclick="clearClick()" data-role="none"/>
+                <input class="button" type="button" id="about" value="About" onclick="aboutClick()" data-role="none"/><input type="search" id="search" autocomplete="off" placeholder="Search" onSearch="searchNotes()" data-role="none"/><input class="button" type="button" id="clear" value="Clear" onclick="clearClick()" data-role="none"/>
+            </div>
+            <div id="about-drop-down">
+                <center><h3 id="about-title">Smash4Notes</h3></center>
+                <span id="about-text">
+                    <center><strong><u>Author</u></strong><br>Ethan Lie<br>
+                    <strong><u>Website</u></strong><br>www.moogcode.com<br>
+                    <strong><u>Frame Data</u></strong><br>kuroganehammer.com<br><br>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input class="button" type="submit" border="0" name="submit" alt="Donate" id="donate-button" value="Donate">
+</form>
+</center><br>
+                </span>
+                <input class="button" type="button" id="about-close" value="Close" onclick="aboutCloseClick()" data-role="none"/>
             </div>
             <div id="scroll-bar" data-role="none"></div>
             <div id="notes-section">

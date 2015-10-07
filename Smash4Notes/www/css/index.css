@@ -8,7 +8,6 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
 }
 
@@ -67,14 +66,14 @@ body {
 
 #search-bar input#search{
     -webkit-appearance: none;
-    width: 64%;
+    width: 60%;
     height: 100%;
     background: #E57A44;
     border: none;
     border-radius: 0px;
     color: #EBF2FA;
     margin: 0px;
-    padding: 0px;
+    padding-left: 10px;
     font-size: 4vw;
 }
 
@@ -82,14 +81,8 @@ body {
     width: 20%;
 }
 
-#search-bar .iconDiv {
-    position: relative;
-    height: 100%;
-    width: 16%;
-    background: #E57A44;
-    border: none;
-    text-align: center;
-    float: left;
+#search-bar input#about {
+    width: 20%;
 }
 
 #search-bar .icon{
@@ -185,6 +178,55 @@ body {
     width: 30%;
 }
 
-p #about-content {
-    
+#about-drop-down {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    width: 60%;
+    height: 40%;
+    z-index: 2;
+    background: #E57A44;
+    padding: 10px;
+}
+
+#about-drop-down span{
+    width: 100%;
+}
+
+#blanket {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+#about-drop-down #about-close {
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#about-drop-down #donate-button {
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#about-text {
+    font-size: 3.5vw;
+}
+
+#about-title {
+    font-size: 5vw;
 }
