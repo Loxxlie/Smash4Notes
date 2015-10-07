@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel='stylesheet' type="text/css" href='css/jAlert-v3.css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Smash4 Notes</title>
+    </head>
+
+    <body>
+    <!-- Start of HTML markup -->
+        <div class="app">
+            <div id="status-bar-spacer"></div>
+            <div id="search-bar" data-role="none">
+                <div class="iconDiv"><i class="fa fa-info-circle icon"></i></div><input type="search" id="search" autocomplete="off" placeholder="Search..." onSearch="searchNotes()" data-role="none"/><input class="button" type="button" id="clear" value="Clear" onclick="clearClick()" data-role="none"/>
+            </div>
+            <div id="scroll-bar" data-role="none"></div>
+            <div id="notes-section">
+                <textarea class="notes" id="notes" readonly>
+                </textarea>
+                <img id="charBG" />
+                <!-- <button class="stats" id="stats" value="Stats & Frame Data"/> -->
+            </div>
+            <div id="button-bar">
+                <input type="button" class="button" id="framedata" value="Frame Data" onclick="framedataClick()" data-role="none"><input type="button" class="button" id="edit" value="Edit" onclick="editClick()" data-role="none"/>
+            </div>
+        </div>
+    <!-- End of HTML markup -->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script>
+        console.log("This should be shown.");
+            $(document).bind('mobileinit',function(){
+                $.mobile.changePage.defaults.changeHash = false;
+                $.mobile.hashListeningEnabled = false;
+                $.mobile.pushStateEnabled = false;
+                $.mobile.loadingMessage = false;
+                $.mobile.autoInitializePage = false;
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src='js/jAlert-v3.min.js'></script>
+        <script type="text/javascript" src='js/jAlert-functions.min.js'></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
